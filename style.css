@@ -1,3 +1,36 @@
-@charset "UTF-8";
-/* CSS Document */
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e3f6ff; /*Light blue background*/
+}
+
+nav {
+  background-color: #fff6e9; /*Creamy color*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  position: relative;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-left a, .nav-right a {
+  text-decoration: none;
+  color: #002147; /*Dark navy text*/
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+  color: #f08a5d; /*Hover color for navigation bar*/
+}
+
+img {
+  border-radius: 50%;
+}

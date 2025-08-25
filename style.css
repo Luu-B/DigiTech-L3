@@ -28,7 +28,7 @@ nav {
 }
 
 .nav-left a:hover, .nav-right a:hover {
-  color: #ec232c; /*Hover color for navigation bar -- colour was sampled from pinehaven logo*/
+  color: #ec232c; /*Hover color for navigation bar -- colour was sampled from pinehaven logo. Just for a coherent colour scheme*/
 }
 
 img {

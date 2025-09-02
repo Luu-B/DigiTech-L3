@@ -1,4 +1,6 @@
 // JavaScript Document
+// JS for my cones / tubs 
+
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   if (window.scrollY > 50) {
@@ -13,5 +15,13 @@ window.addEventListener('scroll', () => {
 document.querySelectorAll('.cone-card').forEach(card => {
   card.addEventListener('click', () => {
     alert(`You selected: ${card.querySelector('h3').innerText}`);
+  });
+});
+// JS for my single flavour
+const flavourCards = document.querySelectorAll('.flavour-card');
+
+flavourCards.forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('selected');
   });
 });

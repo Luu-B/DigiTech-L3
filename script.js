@@ -1,6 +1,5 @@
 // JavaScript Document
-// JS for my cones / tubs 
-
+// JS for my Nav
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   if (window.scrollY > 50) {
@@ -11,7 +10,7 @@ window.addEventListener('scroll', () => {
     nav.style.height = '60px';
   }
 });
-
+// JS for my cones / tubs 
 document.querySelectorAll('.cone-card').forEach(card => {
   card.addEventListener('click', () => {
     alert(`You selected: ${card.querySelector('h3').innerText}`);

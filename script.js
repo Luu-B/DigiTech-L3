@@ -41,14 +41,60 @@ flavourCards.forEach(card => {
 // Js for my double flavour choices/custom flavour
 
 const doubleCards = document.querySelectorAll('.double-card');
-const customDouble = document.querySelector('.custom-double');
 
 doubleCards.forEach(card => {
   card.addEventListener('click', () => {
-    card.classList.toggle('selected');
+    // Remove 'selected' from all cards first
+    doubleCards.forEach(c => c.classList.remove('selected'));
+    // Add 'selected' only to the clicked card
+    card.classList.add('selected');
   });
 });
 
-customDouble.addEventListener('click', () => {
-  customDouble.classList.toggle('selected');
+
+// JS for my CUSTOM double flavour 
+const flavourCards = document.querySelectorAll('.flavour-card');
+let selectedFlavours = [];
+
+flavourCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const flavour = card.dataset.flavour;
+
+    if (selectedFlavours.includes(flavour)) {
+      // Deselect if already selected
+      selectedFlavours = selectedFlavours.filter(f => f !== flavour);
+      card.classList.remove('selected');
+    } else {
+      if (selectedFlavours.length < 2) {
+        selectedFlavours.push(flavour);
+        card.classList.add('selected');
+      } else {
+        alert("You can only select up to 2 flavours!");
+      }
+    }
+  });
 });
+
+function continueSelection() {
+  if (selectedFlavours.length === 0) {
+    alert("Please select at least 1 flavour.");
+    return;
+  }
+
+  // Save selection to localStorage
+  localStorage.setItem("customDouble", selectedFlavours.join(" + "));
+
+  // Redirect back to main page at double flavour section
+  window.location.href = "index.html#double-flavours";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const customDouble = document.querySelector(".custom-double");
+  const savedCustom = localStorage.getItem("customDouble");
+
+  if (savedCustom && customDouble) {
+    customDouble.innerHTML = `<p>Custom Double Flavour: ${savedCustom}</p>`;
+    customDouble.classList.add("selected");
+  }
+});
+

@@ -16,19 +16,18 @@ nav {
   left: 0;
   width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 60px; /* Smaller height */
+  height: 60px; 
 }
 
 /* Navigation Links */
 .nav-left, .nav-right {
   display: flex;
-  gap: 15px;
 }
 
 .nav-left, .nav-right {
   display: flex;
   color: #112B16; /* Dark Green */
-  gap: 20px;
+  gap: 15px;
 }
 
 .nav-left a, .nav-right a {
@@ -50,12 +49,12 @@ nav {
   transform: translateX(-50%);
   background: #fff;
   border-radius: 50%;
-  padding: 8px;
+  padding: 10px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
-  height: 50px;
+  height: 60px;
   width: auto;
 }
 
@@ -167,5 +166,74 @@ main {
 }
 
 .flavour-card.selected {
+  border: 3px solid #f08a5d;
+}
+
+.double-flavours {
+  background-color: #fff9f3; /* Slightly lighter than nav */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.double-flavours h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #002147;
+}
+
+.double-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.double-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.double-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.double-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.double-card p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #f08a5d; /*Same colour as single flavour just to make it flow nicely*/
+}
+
+.custom-double {
+  background-color: #ffe8d6;
+  margin: 30px auto 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.custom-double:hover {
+  background-color: #ffd1b3;
+}
+
+.selected {
   border: 3px solid #f08a5d;
 }

@@ -34,6 +34,34 @@
   </section>
 </main>
 
+<section class="order-builder card"> 
+    <h2>Build Your Order</h2>
+
+    <div class="control-row card"> 
+      <label for="quantity">How many ice creams?</label>
+      <select id="quantity">
+        <!-- 1-10 -->
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </div>
+	
+<!--For the ice cream boxes-->
+<div class="icecream-grid" id="icecream-grid"></div>
+	
+	<div class="actions" style="margin-top:16px;"> 
+      <button id="finishBtn" class="primary">Finish and Checkout</button>
+    </div>
+  </section>
+	
 	<!--First Stage = choosing the cone/tub for the ice cream order-->
 <section class="cones-tubs">
   <h2>Cones and Tubs</h2>
@@ -59,7 +87,7 @@
     
     <div class="cone-card">
       <h3>Takeaway Tub</h3>
-      <p>One Size: $5.60</p>
+      <p>One Size: $6.00</p>
     </div>
     
   </div>
@@ -124,6 +152,11 @@
       <img src="images/pineapple.jpg" alt="Pineapple">
       <h3>Pineapple</h3>
     </div>
+	  
+	<div class="flavour-card">
+      <img src="images/vanilla.jpg" alt="Vanilla">
+      <h3>Plain Vanilla</h3>
+    </div>
     	<!--Will find/fill in all the photos later 02/09-->
 
   </div>
@@ -159,11 +192,6 @@
       <img src="images/mixed-berry.jpg" alt="Mixed Berry">
       <p>Mixed Berry</p>
     </div>
-  </div>
-
-  <!-- Custom Option -->
-  <div id="double-flavours" class="custom-double" onclick="href='customFlavour.html'">
-    <p>Custom Double Flavour (Pick Any Two Flavours)</p>
   </div>
 </section>
 

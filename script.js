@@ -1,6 +1,4 @@
-// JavaScript Document
-
-// JS for my Nav
+//Nav JS
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   if (window.scrollY > 50) {
@@ -13,8 +11,8 @@ window.addEventListener('scroll', () => {
 });
 
 
+// Cones/Tubs
 
-// JS for my cones / tubs 
 document.querySelectorAll('.cone-card').forEach(card => {
   card.addEventListener('click', () => {
     alert(`You selected: ${card.querySelector('h3').innerText}`);
@@ -22,8 +20,7 @@ document.querySelectorAll('.cone-card').forEach(card => {
 });
 
 
-
-// JS for my single flavour
+// Single Flavour
 const flavourCards = document.querySelectorAll('.flavour-card');
 
 flavourCards.forEach(card => {
@@ -37,64 +34,49 @@ flavourCards.forEach(card => {
 });
 
 
-
-// Js for my double flavour choices/custom flavour
-
+// Double Flavour 
 const doubleCards = document.querySelectorAll('.double-card');
 
 doubleCards.forEach(card => {
   card.addEventListener('click', () => {
-    // Remove 'selected' from all cards first
-    doubleCards.forEach(c => c.classList.remove('selected'));
-    // Add 'selected' only to the clicked card
-    card.classList.add('selected');
+    doubleCards.forEach(c => c.classList.remove('selected')); // Remove from all
+    card.classList.add('selected'); // Add to clicked one
   });
 });
 
+// Ordering System
 
-// JS for my CUSTOM double flavour 
-const flavourCards = document.querySelectorAll('.flavour-card');
-let selectedFlavours = [];
+// Generate ice cream boxes based on dropdown
+function generateIcecreamBoxes() {
+  const number = parseInt(document.getElementById('quantity').value);
+  const grid = document.getElementById('icecream-grid');
+  grid.innerHTML = '';
 
-flavourCards.forEach(card => {
-  card.addEventListener('click', () => {
-    const flavour = card.dataset.flavour;
+  for (let i = 1; i <= number; i++) {
+    const box = document.createElement('div');
+    box.classList.add('icecream-box');
+    box.textContent = `Ice Cream ${i}`;
+    box.addEventListener('click', () => toggleSelect(box));
+    grid.appendChild(box);
+  }
+}
 
-    if (selectedFlavours.includes(flavour)) {
-      // Deselect if already selected
-      selectedFlavours = selectedFlavours.filter(f => f !== flavour);
-      card.classList.remove('selected');
-    } else {
-      if (selectedFlavours.length < 2) {
-        selectedFlavours.push(flavour);
-        card.classList.add('selected');
-      } else {
-        alert("You can only select up to 2 flavours!");
-      }
-    }
-  });
-});
+// Toggle selection style
+function toggleSelect(box) {
+  box.classList.toggle('selected');
+}
 
-function continueSelection() {
-  if (selectedFlavours.length === 0) {
-    alert("Please select at least 1 flavour.");
+// Finish & checkout validation
+function finishOrder() {
+  const selected = document.querySelectorAll('.icecream-box.selected');
+  if (selected.length === 0) {
+    alert('Please select at least one ice cream before checkout!');
     return;
   }
 
-  // Save selection to localStorage
-  localStorage.setItem("customDouble", selectedFlavours.join(" + "));
-
-  // Redirect back to main page at double flavour section
-  window.location.href = "index.html#double-flavours";
+  const total = selected.length * 6; // Example pricing
+  alert(`You selected ${selected.length} ice creams.\n Estimated Total: $${total}`);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const customDouble = document.querySelector(".custom-double");
-  const savedCustom = localStorage.getItem("customDouble");
-
-  if (savedCustom && customDouble) {
-    customDouble.innerHTML = `<p>Custom Double Flavour: ${savedCustom}</p>`;
-    customDouble.classList.add("selected");
-  }
-});
-
+// Automatically generate initial box on page load
+document.addEventListener('DOMContentLoaded', generateIcecreamBoxes);

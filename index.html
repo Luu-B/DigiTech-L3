@@ -10,9 +10,9 @@
 
 <nav>
   <div class="nav-left">
-    <a href="#">Home</a>
-    <a href="#">Ingredients</a>
-    <a href="#">Order</a>
+    <a href="#home">Home</a>
+    <a href="#ingrediants">Ingredients</a>
+    <a href="#order">Order</a>
   </div>
 
   <div class="logo">
@@ -20,14 +20,14 @@
   </div>
 
   <div class="nav-right">
-    <a href="#">Cup/Cone</a>
-    <a href="#">Flavours</a>
-    <a href="#">Toppings</a>
+    <a href="#conetub">Cone/Tub</a>
+    <a href="#flavours">Flavours</a>
+    <a href="#toppings">Toppings</a>
   </div>
 </nav>
 	
 <main>
-  <section>
+  <section id="home">
 	 <link href="https://fonts.googleapis.com/css?family=Oswald:700|Neuton" rel="stylesheet" type="text/css">
 
 <span>Welcome to Pinehaven Orchards</span>
@@ -46,7 +46,7 @@ Beyond our store, Pinehaven also supplies fresh produce to restaurants, cafes, a
 </main>
 	
 	<!--First Stage = choosing the cone/tub for the ice cream order-->
-<section class="cones-tubs">
+<section id="conetub" class="cones-tubs">
   <h2>Cones and Tubs</h2>
   <div class="cones-container">
     
@@ -77,8 +77,8 @@ Beyond our store, Pinehaven also supplies fresh produce to restaurants, cafes, a
 </section>
 	<!--Second Stage = choosing 1 flavour, if that is the only option/desired option-->
 
-<section class="single-flavours">
-  <h2>Single Flavours</h2>
+<section id = "flavours" class="single-flavours">
+  <h2>Flavours</h2>
   <div class="flavours-container">
     
     <div class="flavour-card">
@@ -196,11 +196,32 @@ Beyond our store, Pinehaven also supplies fresh produce to restaurants, cafes, a
       <div class="image-row">
         <img src="images/mixedBerry.jpg" alt="Mixed Berry">
       </div>
-      <p>Mixed Berry</p>
+      <h3>Mixed Berry</h3>
     </div>
   </div>
 </section>
 
+<section id="toppings" class="toppings">
+  <h2>Toppings</h2>
+  <div class="toppings-container">
+
+    <div class="topping-card">
+      <img src="images/chocflake.jpg" alt="Chocolate Flake">
+      <h3>Chocolate Flake</h3>
+      <p>$0.60</p>
+    </div>
+
+    <div class="topping-card">
+      <img src="images/miniChocFish.webp" alt="Mini Chocolate Fish">
+      <h3>Mini Chocolate Fish</h3>
+      <p>$0.30</p>
+    </div>
+
+  </div>
+</section>
+	
+	
+	
 <script src="script.js"></script>
 	</body>
 </html>

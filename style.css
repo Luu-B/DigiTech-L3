@@ -212,7 +212,6 @@ main section p {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  
   /* Make cards perfectly square */
   aspect-ratio: 1 / 1; 
 }
@@ -308,20 +307,6 @@ main section p {
   border-radius: 0 8px 8px 0; /* round right corner */
 }
 
-/* Triple flavour - just a single 80x80 image */
-.triple-card .image-row {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
-}
-
-.triple-card .image-row img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
 /* Card label under images */
 .double-card p {
   margin: 0;
@@ -345,3 +330,66 @@ main section p {
   }
 }
 
+/* Toppings Section */
+.toppings {
+  background-color: #ebe5c6; /* creme background */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.toppings h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #035e23; /* dark green heading */
+  text-shadow: 1px 1px 2px #ec232a; /* subtle red/orange shadow */
+}
+
+.toppings-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.topping-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  border: 2px solid transparent;
+}
+
+.topping-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.topping-card h3 {
+  font-size: 18px;
+  color: #aaae2f; /* lime green title */
+  margin: 8px 0 5px 0;
+}
+
+.topping-card p {
+  font-size: 16px;
+  color: #035e23; /* dark green text */
+  margin: 0;
+  font-weight: bold;
+}
+
+.topping-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid #ec232a; /* red/orange border on hover */
+}

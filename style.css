@@ -393,3 +393,119 @@ main section p {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border: 2px solid #ec232a; /* red/orange border on hover */
 }
+
+/* Order / Shopping */
+/* The order summary sidebar */
+.order-summary {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  width: 280px;
+  height: calc(100% - 60px);
+  background: #ebe5c6;
+  border-left: 3px solid #f08a5d;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.order-summary h3 {
+  color: #035e23;
+  margin-bottom: 10px;
+}
+
+#order-items {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 14px;
+  color: #002147;
+}
+
+.order-item {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+}
+
+.order-actions {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.order-actions button {
+  background-color: #035e23;
+  color: #000;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.order-actions button:hover {
+  background-color: #ec232a;
+}
+
+/* Checkout Page*/
+.checkout {
+  background-color: #ebe5c6;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: none;
+}
+
+.checkout.visible {
+  display: block;
+}
+
+.checkout h2 {
+  color: #035e23;
+  text-shadow: 1px 1px 2px #ec232a;
+}
+
+.checkout-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.checkout-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.checkout-buttons button {
+  background-color: #035e23;
+  color: #000;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.checkout-buttons button:hover {
+  background-color: #ec232a;
+}
+
+#checkout {
+	color: #112B16
+}
+
+#order-summary {
+  flex: 1; /* sidebar takes 1/4 width */
+  position: sticky; /* stays visible when scrolling */
+  top: 100px;
+  background: #fff;
+  border: 2px solid #f08a5d;
+  border-radius: 12px;
+  padding: 10px;
+}

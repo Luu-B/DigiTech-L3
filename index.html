@@ -45,6 +45,8 @@ Beyond our store, Pinehaven also supplies fresh produce to restaurants, cafes, a
   </section>
 </main>
 	
+<section id="shop">
+	
 	<!--First Stage = choosing the cone/tub for the ice cream order-->
 <section id="conetub" class="cones-tubs">
   <h2>Cones and Tubs</h2>
@@ -140,7 +142,6 @@ Beyond our store, Pinehaven also supplies fresh produce to restaurants, cafes, a
       <img src="images/vanilla.jpg" alt="Vanilla">
       <h3>Plain Vanilla</h3>
     </div>
-    	<!--Will find/fill in all the photos later 02/09-->
 
   </div>
 </section>
@@ -216,11 +217,32 @@ Beyond our store, Pinehaven also supplies fresh produce to restaurants, cafes, a
       <h3>Mini Chocolate Fish</h3>
       <p>$0.30</p>
     </div>
-
   </div>
 </section>
 	
+<!--ORder / Shopping-->
+<!-- Order Summary Sidebar -->
+<div id="order-summary" class="order-summary">
+  <h3>Your Order</h3>
+  <div id="order-items"></div>
+  <div class="order-actions">
+    <button id="checkout-btn">Checkout</button>
+	<button id="add-another-btn">Add Another</button> 
+  </div>
+</div>
+
+</section>	<!--End of the shop-->
 	
+<!-- Checkout Page -->
+<section id="checkout" class="checkout">
+  <h2>Checkout</h2>
+  <div id="checkout-items"></div>
+  <p id="checkout-total"></p>
+  <div class="checkout-buttons">
+    <button id="back-to-builder">Back to Builder</button>
+    <button id="confirm-order">Confirm Order</button>
+  </div>
+</section>
 	
 <script src="script.js"></script>
 	</body>

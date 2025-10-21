@@ -99,7 +99,7 @@ flavourCards.forEach(card => {
     } else {
       currentIceCream.flavours.push(flavour);
     }
-	  
+	
 	updateOrderSummary();
   });
 });
@@ -107,15 +107,15 @@ flavourCards.forEach(card => {
 // Double flavour
 doubleCards.forEach(card => {
   card.addEventListener('click', () => {
-    if (currentIceCream.size !== 'normal') {
-      alert("Double flavours are only for normal size!");
+    if (currentIceCream.size !== 'normal' && currentIceCream.cone !== 'Takeaway Tub') {
+      alert("Double flavours are only for normal size or Takeaway Tub!");
       return;
     }
     doubleCards.forEach(c => c.classList.remove('selected'));
     card.classList.add('selected');
 
     currentIceCream.flavours = [card.querySelector('p').innerText];
-	  
+	
 	updateOrderSummary();
   });
 });
@@ -130,10 +130,14 @@ toppingCards.forEach(card => {
       currentIceCream.toppings = currentIceCream.toppings.filter(t => t !== topping);
     } else {
       currentIceCream.toppings.push(topping);
-      currentIceCream.price += getToppingPrice(topping);
-    }
-	  
-	  updateOrderSummary(); 
+	}
+	//this is to replace the price every time you select/deselect toppings. instead of the prices going abnormally high. 
+	const basePrice = calculateBasePrice(currentIceCream.cone, currentIceCream.size);
+    let toppingTotal = 0;
+    currentIceCream.toppings.forEach(t => toppingTotal += getToppingPrice(t));
+    currentIceCream.price = basePrice + toppingTotal;
+	
+	updateOrderSummary(); 
   });
 });
 

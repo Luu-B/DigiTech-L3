@@ -53,10 +53,11 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #fff9f1; /*Light creme background*/
+  padding-bottom: 140px;
 }
 
 nav {
-  background-color: #d1d47f; /*Light yellow-greencolor*/
+  background-color: #d1d47f; /*Light yellow-green color*/
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,9 +65,11 @@ nav {
   position: fixed;/*So the navigation stays when scrolling*/
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: 60px; 
+  z-index: 10000;
+  overflow: hidden;
 }
 
 /* Navigation Links */
@@ -112,6 +115,10 @@ nav {
 main {
   padding-top: 80px; /* Space so content isn't hidden under nav */
   text-align: center;
+}
+
+main, section { 
+  scroll-margin-top: 80px;
 }
 
 main section h1 {
@@ -399,17 +406,26 @@ main section p {
 .order-summary {
   position: fixed;
   right: 0;
-  top: 60px;
-  width: 280px;
-  height: calc(100% - 60px);
+  left: 50%;
+  transform: translateX(-50%); /*to center it perfectly*/
+  width: 320px;
   background: #ebe5c6;
-  border-left: 3px solid #f08a5d;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  z-index: 1000;
+  align-items: center;
+  text-align: center;
+  z-index: 9999;
+}
+
+.order-summary h2 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #035e23; /* green */
+  text-shadow: 1px 1px #ec232a; /* red shadow*/
 }
 
 .order-summary h3 {

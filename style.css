@@ -148,7 +148,8 @@ main section p {
 .cones-tubs h2 {
   font-size: 28px;
   margin-bottom: 25px;
-  color: #002147; /* Dark navy */
+  color: #035e23; /* Dark green */
+  text-shadow: 1px 1px 2px #ec232a; /* subtle red/orange shadow */
 }
 
 .cones-container {
@@ -169,13 +170,14 @@ main section p {
 .cone-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #f08a5d; /* Accent color for headings */
+  color: #aaae2f; /* Accent color for headings */
+	
 }
 
 .cone-card p {
   margin: 5px 0;
   font-size: 16px;
-  color: #333;
+  color: #035e23;
 }
 
 .cone-card:hover {
@@ -197,7 +199,8 @@ main section p {
 .single-flavours h2 {
   font-size: 28px;
   margin-bottom: 25px;
-  color: #002147;
+  color: #035e23;
+  text-shadow: 1px 1px 2px #ec232a; /* subtle red/orange shadow */
 }
 
 .flavours-container {
@@ -233,7 +236,7 @@ main section p {
 
 .flavour-card h3 {
   font-size: 16px;
-  color: #f08a5d;
+  color: #035e23;
   margin: 0;
 }
 
@@ -256,7 +259,8 @@ main section p {
 .double-flavours h2 {
   font-size: 28px;
   margin-bottom: 25px;
-  color: #002147;
+  color: #035e23;
+  text-shadow: 1px 1px 2px #ec232a; /* subtle red/orange shadow */
 }
 
 /* Grid for double/triple cards - same as single flavours */
@@ -319,7 +323,7 @@ main section p {
   margin: 0;
   font-weight: bold;
   font-size: 16px;
-  color: #f08a5d;
+  color: #035e23;
   text-align: center;
 }
 

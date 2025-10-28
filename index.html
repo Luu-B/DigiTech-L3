@@ -8,27 +8,29 @@
 </head>
 <body>
 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>	
+	
 <nav>
-  <div class="nav-left">
-    <a href="#home">Home</a>
-    <a href="#ingrediants">Ingredients</a>
-    <a href="#order">Order</a>
+ <div class="navigation" role="navigation">
+  <div class="nav-bar">
+  <div class="mobile-icon">.</div>
+	<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#ingrediants">Ingredients</a></li>
+    <li><a href="#order">Order</a></li>
+    <li><a href="#conetub">Cone/Tub</a></li>
+    <li><a href="#flavours">Flavours</a></li>
+    <li><a href="#toppings">Toppings</a></li>
+	</ul>
   </div>
-
-  <div class="logo">
-    <img src="fullLogo.png" alt="Pinehaven Logo of a Tree with Apples and Pears" width="336" height="200">
-  </div>
-
-  <div class="nav-right">
-    <a href="#conetub">Cone/Tub</a>
-    <a href="#flavours">Flavours</a>
-    <a href="#toppings">Toppings</a>
-  </div>
+ </div>
 </nav>
 	
 <main>
   <section id="home">
 	 <link href="https://fonts.googleapis.com/css?family=Oswald:700|Neuton" rel="stylesheet" type="text/css">
+	  
+<img src="images/fullLogo.png" alt="Pinehaven Orchards Logo of a Tree with Pears and Apples">
 
 <span>Welcome to Pinehaven Orchards</span>
 		<p>For over 100 years, our third-generation family business has proudly grown and supplied fresh fruit and vegetables “Grown by Us in Greytown.” Alongside our very own home-grown varieties of apples, stonefruit, berries, and vegetables, Pinehaven offers a wide and carefully selected range of fresh produce sourced both locally and from trusted markets further afield. Our commitment to quality and sustainability ensures that every fruit and vegetable we provide is fresh, flavoursome, and full of character.
@@ -37,7 +39,7 @@
 Complementing our fresh produce is an equally tempting selection of Greytown Butchery meats, including their award-winning sausages and bacon, alongside artisanal bread, eggs, dried fruits, and a variety of spices. You’ll also find Grans’ homemade jams, pickles, and preserves—perfect for adding a touch of home-grown goodness to your meals.
 <br>
 <br>
-No visit to Greytown would be complete without stopping by Pinehaven for one of our famous Real Fruit Icecreams. Made to your liking with your choice of fresh fruit, these ice creams are a favourite for locals and visitors alike. On warm, sunny days, they provide the perfect refreshing treat, whether you’re taking a break from exploring the town, enjoying a leisurely stroll, or stopping by on a road trip through the Wairarapa. Their rich, natural flavours, made from the very fruits we grow ourselves, make them a wholesome yet indulgent delight. Quick, satisfying, and utterly delicious, our ice creams have become a cherished stop for anyone wanting to savour a taste of genuine, fresh, and locally grown fruit.
+No visit to Greytown would be complete without stopping by Pinehaven for one of our famous Real Fruit Icecreams. Made to your liking with your choice of frozen fruit, these ice creams are a favourite for locals and visitors alike. On warm, sunny days, they provide the perfect refreshing treat, whether you’re taking a break from exploring the town, enjoying a leisurely stroll, or stopping by on a road trip through the Wairarapa. Their rich, natural flavours make them a wholesome yet indulgent delight. Quick, satisfying, and utterly delicious, our ice creams have become a cherished stop for anyone wanting to savour a taste of genuine, tasty fruit.
 <br>
 <br>
 Beyond our store, Pinehaven also supplies fresh produce to restaurants, cafes, and rest homes throughout the Wairarapa region, bringing the same quality and care to every table. Whether you’re picking up something for your family, treating yourself to an ice cream, or sourcing premium ingredients for your business, Pinehaven is your destination for the very best of Greytown’s produce.</p><!-- Write this out later -->
@@ -222,6 +224,7 @@ Beyond our store, Pinehaven also supplies fresh produce to restaurants, cafes, a
 	
 <!--ORder / Shopping-->
 <!-- Order Summary Sidebar -->
+<section id = "order">
 <div id="order-summary" class="order-summary">
   <h3>Your Order</h3>
   <div id="order-items"></div>
@@ -230,7 +233,7 @@ Beyond our store, Pinehaven also supplies fresh produce to restaurants, cafes, a
 	<button id="add-another-btn">Add Another</button> 
   </div>
 </div>
-
+	</section>
 </section>	<!--End of the shop-->
 	
 <!-- Checkout Page -->

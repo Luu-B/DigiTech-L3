@@ -1,3 +1,12 @@
+$(document).ready(function(){
+	
+	$('.mobile-icon').click( function() {
+		$('nav ul').toggleClass("showing");
+
+	});
+
+});
+
 //Nav shrink when scrolling
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');

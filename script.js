@@ -259,3 +259,5 @@ document.getElementById('confirm-order').addEventListener('click', () => {
   updateOrderSummary();
   checkoutSection.classList.remove('visible');
 });
+
+

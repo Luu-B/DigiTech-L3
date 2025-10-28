@@ -56,55 +56,120 @@ body {
   padding-bottom: 140px;
 }
 
-nav {
-  background-color: #d1d47f; /*Light yellow-green color*/
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 10px;
-  position: fixed;/*So the navigation stays when scrolling*/
-  top: 0;
-  left: 0;
-  width: 100vw;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 60px; 
-  z-index: 10000;
-  overflow: hidden;
+* {
+	margin:0;
+	padding:0;
+}
+/* FULL SCREEN - Navigation Style */
+
+.nav-bar {
+	width: 100%;
+	position: fixed;
+	height:auto;
+	z-index: 1000;
+	top: 0;
+	font-size: 20px;
+  background-color: #d1d47f;
+}
+.nav-bar li:last-child {
+	margin-right: 60px;
 }
 
-/* Navigation Links */
-.nav-left, .nav-right {
-  display: flex;
+a {
+	text-decoration: none;
+	color:inherit;
 }
 
-.nav-left, .nav-right {
-  display: flex;
-  color: #112B16; /* Dark Green */
-  gap: 15px;
+nav ul {
+	
+	text-align:center;
+	padding: 1%;
 }
 
-.nav-left a, .nav-right a {
-  text-decoration: none;
-  color: #035e23; /*Dark green text*/
-  font-weight: bold;
-  font-size: 20px;
-  transition: color 0.3s ease;
+nav ul li {
+	display: inline-block;
+
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	padding: 10px 15px;
+	letter-spacing: 1px;
+	color: black;
 }
 
-.nav-left a:hover, .nav-right a:hover {
-  color: #ec232c; /*Hover color for navigation bar -- colour was sampled from pinehaven logo. Just for a coherent colour scheme*/
+ nav a:hover {
+	color: orangered;
+}
+/* Mobile navigation */
+.mobile-icon {
+	width: 100%;
+	text-align: right;
+	box-sizing: border-box;
+	cursor: pointer;
+	color: green;
+	display: none;
+	font-size: 20px;
+	font-family: bold;
+	margin: 2% 2%;
+	position: relative;
+	padding-left: 1.25em;
+}
+/* style of mobile icron */
+.mobile-icon:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.2em;
+	width: 1.2em;
+	height: 0.16em;
+	background: black;
+	box-shadow: 0 0.35em 0 0 black, 0 0.7em 0 0 black;
+}     
+
+
+
+/* RESPONSIVE CSS - Media Query */
+
+@media screen and (max-width: 1300px) {
+	
+		.mobile-icon {
+			display: block;
+		}
+
+		nav ul {
+			max-height: 0px;
+			padding: 0px;
+		}
+		
+		/* mobile nav  */
+		.showing {
+			max-height: 20em;
+			padding-bottom: 10px;
+			font-size: 18px;
+		}
+		/* end */
+
+		.nav-bar {
+			width:100%;
+			background-color: #d1d47f;
+		}
+
+		nav ul li {
+			box-sizing: border-box;
+			width: 100%;
+			text-align: center;
+		}
+		
+		nav ul li:hover {
+			background-color: #828449;
+			width: 100%;
+            color: #1D1E0C;
+		}
+
+		.nav-bar {
+			display: block;
+		}
 }
 
-/* Center Logo */
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #fff;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
-}
 
 .logo img {
   height: 60px;

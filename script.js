@@ -260,4 +260,3 @@ document.getElementById('confirm-order').addEventListener('click', () => {
   checkoutSection.classList.remove('visible');
 });
 
-

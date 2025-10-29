@@ -68,8 +68,9 @@ body {
 	height:auto;
 	z-index: 1000;
 	top: 0;
+	left:0;
 	font-size: 20px;
-  background-color: #d1d47f;
+    background-color: #d1d47f;
 }
 .nav-bar li:last-child {
 	margin-right: 60px;

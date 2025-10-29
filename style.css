@@ -621,3 +621,26 @@ main section p {
   margin-bottom: 10px;
 }
 
+#credits {
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: #ece5c4; /* same as ingredients */
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: #333;
+  line-height: 1.6;
+}
+
+#credits h2 {
+  text-align: center;
+  color: #035e23;
+  margin-bottom: 20px;
+}
+
+#credits p {
+  margin-bottom: 10px;
+}

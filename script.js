@@ -203,8 +203,9 @@ document.getElementById('add-another-btn').addEventListener('click', () => {
   if (Object.keys(currentIceCream).length) {
     allOrders.push(currentIceCream);               // Save current ice cream
     currentIceCream = {};                           // Reset for next build
-    document.querySelectorAll('.selected').forEach(e => e.classList.remove('selected')); // Unselect UI
-    updateOrderSummary();                           // Update sidebar
+    document.querySelectorAll('.cone-card, .flavour-card, .double-card, .topping-card')
+        .forEach(e => e.classList.remove('selected'));    
+	updateOrderSummary();                           // Update sidebar
     alert("Current ice cream added! Start building your next one."); // Notify user
   } else {
     alert("You haven't built an ice cream yet!");  // Handle empty build

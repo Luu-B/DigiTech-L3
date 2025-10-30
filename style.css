@@ -89,12 +89,11 @@ nav ul {
 
 nav ul li {
 	display: inline-block;
-
 	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 400;
 	padding: 10px 15px;
 	letter-spacing: 1px;
-	color: black;
+	color: #4b2600;
 }
 
  nav a:hover {
@@ -108,7 +107,7 @@ nav ul li {
   max-width: 900px;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  color: #000;
+  color: #4b2600; /*Dark brown*/
   line-height: 1.6;
 }
 
@@ -248,14 +247,14 @@ main section p {
 .cone-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #aaae2f; /* Accent color for headings */
+  color: #035e23; /* Accent color for headings */
 	
 }
 
 .cone-card p {
   margin: 5px 0;
   font-size: 16px;
-  color: #035e23;
+  color: #4b2600; /*Dark brown*/
 }
 
 .cone-card:hover {
@@ -466,13 +465,13 @@ main section p {
 
 .topping-card h3 {
   font-size: 18px;
-  color: #000; /* lime green title */
+  color: #035e23; /* dark green title */
   margin: 8px 0 5px 0;
 }
 
 .topping-card p {
   font-size: 16px;
-  color: #035e23; /* dark green text */
+  color: #4b2600; /* dark brown text */
   margin: 0;
   font-weight: bold;
 }
@@ -515,7 +514,7 @@ main section p {
   flex-grow: 1;
   text-align: left;
   font-size: 14px;
-  color: #002147;
+  color: #4b2600;
 }
 
 .order-item {
@@ -529,8 +528,8 @@ main section p {
 }
 
 .order-actions button {
-  background-color: #035e23;
-  color: #000;
+  background-color: #aaae2f;
+  color: black;
   border: none;
   padding: 8px 14px;
   border-radius: 6px;
@@ -599,7 +598,7 @@ main section p {
   position: sticky; /* stays visible when scrolling */
   top: 100px;
   background: #fff;
-  border: 2px solid #f08a5d;
+  border: 2px solid orangered;
   border-radius: 12px;
   padding: 10px;
 }
@@ -627,7 +626,7 @@ main section p {
 
 #ingredients h4 {
   margin-top: 20px;
-  color: #4b2600;
+  color: #4b2600; /*Dark brown text*/
 }
 
 #ingredients p {
